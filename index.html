@@ -46,7 +46,7 @@
         <main>
             <section class="first-main-sec">
                 <h1 class="main-page-title">Эффективные решения для вашего бизнеса</h1>
-                <button class="button-main" type="button">Заказать услугу</button>
+                <button class="button-main" type="button" data-modal-open >Заказать услугу</button>
             </section>
             <section class="advantage-sec">
                 <div class="container">
@@ -350,5 +350,11 @@
                 </div>
             </div>
         </footer>
-</body>
+        <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+                <button class="button-close" data-modal-close >X</button>
+            </div>
+        </div>
+     <script src="./js/modal.js"></script>
+    </body>
 </html>
