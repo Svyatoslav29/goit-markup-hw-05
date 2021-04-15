@@ -20,7 +20,7 @@
         </a>
         <nav class="navigation">
             <ul class="list menu">
-                <li class="list-nav-item"><a class="link-nav-active" href="./index.html">Студия</a></li>
+                <li class="list-nav-item"><a class="link-nav-active line" href="./index.html">Студия</a></li>
                 <li class="list-nav-item"><a class="link-nav" href="./portfolio.html">Портфолио</a></li>
                 <li class="list-nav-item"><a class="link-nav" href="">Контакты</a></li>
             </ul>
@@ -92,12 +92,33 @@
             </section>
             <section class="about-us-sec">
                 <div class="container">
-                <h2 class="main-page-section-title">Чем мы занимаемся</h2>
-                <ul class="list about-us">
-                    <li><img src="./images/galery/img1.png" width="370" height="294" alt="клавиатура"></li>
-                    <li><img src="./images/galery/img2.png" width="370" height="294" alt="ноутбук"></li>
-                    <li><img src="./images/galery/img3.png" width="370" height="294" alt="планшет"></li>
-                </ul>
+                  <h2 class="main-page-section-title">Чем мы занимаемся</h2>
+                    <ul class="list about-us">
+                        <li>
+                            <div class="about-us-cont">
+                             <img src="./images/galery/img1.png" width="370" height="294" alt="клавиатура" class="about-us-img">
+                               <div class="about-us-item-title">
+                                 <p class="about-us-item-text">ДЕСКТОПНЫЕ ПРИЛОЖЕНИЯ</p>
+                               </div>  
+                            </div>
+                        </li>
+                        <li>
+                            <div class="about-us-cont">
+                                <img src="./images/galery/img2.png" width="370" height="294" alt="ноутбук">
+                                <div class="about-us-item-title">
+                                    <p  class="about-us-item-text">МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="about-us-cont">
+                              <img src="./images/galery/img3.png" width="370" height="294" alt="планшет">
+                                <div class="about-us-item-title">
+                                    <p  class="about-us-item-text">ДИЗАЙНЕРСКИЕ РЕШЕНИЯ</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </section>
             <section class="main-team-sec">
@@ -352,7 +373,11 @@
         </footer>
         <div class="backdrop is-hidden" data-modal>
             <div class="modal">
-                <button class="button-close" data-modal-close >X</button>
+                <button class="button-close" data-modal-close >
+                   <svg class="icon" width="11" height="11">
+                     <use href="./images/sprite.svg#icon-vector"></use>
+                   </svg>
+                </button>
             </div>
         </div>
      <script src="./js/modal.js"></script>
