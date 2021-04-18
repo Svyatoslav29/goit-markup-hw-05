@@ -122,6 +122,8 @@
     display: inline-block;
     height: 31px;
     margin-right: 93px;
+    padding-top: 24px;
+    padding-bottom: 25px;
   }
   
   .header {
@@ -210,7 +212,8 @@
   border-radius: 4px;
   border: none;
   height: 38px;
-  transition: background-color var(--animation) var(--animation-timing-function);
+  transition: color var(--animation) var(--animation-timing-function);
+  transition: background var(--animation) var(--animation-timing-function);
     }
   
   .button:hover,
@@ -314,7 +317,7 @@ margin-bottom: 4px;
   border-radius: 50%;
   height: 44px;
   width: 44px;
-  transition: background-color var(--animation) var(--animation-timing-function);
+  transition: background-color var(--animation) var(--animation-timing-function), color var(--animation) var(--animation-timing-function);
 }
 
 .social-icons-item + .social-icons-item {
@@ -747,9 +750,10 @@ color: var(--bg-text-color);
   top: 50%;
   left: 50%;
   background-color: var(--bg-text-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transform: translate(-50%, -50%) scale(1);
-  transition: transform 250ms ease-in-out 1s;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-close {
@@ -774,7 +778,7 @@ pointer-events: none;
 }
 
 .is-hidden .modal {
-  transform: translateX(100%, 100%) scale(0.2);
+  transform: translateX(-50%, -50%) scale(0.3);
 }
 
 .line:after {
@@ -797,7 +801,6 @@ pointer-events: none;
 .portfolio-item-overlay {
   display: flex;
   align-items: center;
- /* text-align: center;*/
   position: absolute;
   top: 0;
   left: 0;
@@ -806,7 +809,7 @@ pointer-events: none;
   background-color: rgba(33,150,243,0.9);
   opacity: 0;
   transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--animation) cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-list-item:hover .portfolio-item-overlay,
 .portfolio-list-item:focus .portfolio-item-overlay {
@@ -818,7 +821,7 @@ pointer-events: none;
   background-color: rgba(33,150,243,0.9);
   opacity: 1;
   transform: translateY(0);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--animation) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-item-overlay-text {
