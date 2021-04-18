@@ -212,8 +212,7 @@
   border-radius: 4px;
   border: none;
   height: 38px;
-  transition: color var(--animation) var(--animation-timing-function);
-  transition: background var(--animation) var(--animation-timing-function);
+  transition: color var(--animation) var(--animation-timing-function), background var(--animation) var(--animation-timing-function);
     }
   
   .button:hover,
