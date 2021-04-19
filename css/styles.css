@@ -19,7 +19,7 @@
 --bg-text-color: #FFFFFF;
 --white-bg-color: #F5F4FA;
 --icon-main-color: #AFB1B8;
---animation: 250ms;
+--animation: 2500ms;
 --animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 
@@ -280,7 +280,7 @@ margin-bottom: 4px;
   }
 
   .portfolio-list-item {
-    transition: var(--animation) var(--animation-timing-function);
+    transition: box-shadow var(--animation) var(--animation-timing-function);
     background: var(--bg-text-color);
     border: 1px solid #EEEEEE;
     box-sizing: border-box;
@@ -290,6 +290,8 @@ margin-bottom: 4px;
   .portfolio-list-item:hover {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.06);
   }
+
+  
 
  /* иконки */
  
@@ -316,7 +318,8 @@ margin-bottom: 4px;
   border-radius: 50%;
   height: 44px;
   width: 44px;
-  transition: background-color var(--animation) var(--animation-timing-function), color var(--animation) var(--animation-timing-function);
+  fill: currentColor;
+  transition: fill var(--animation) var(--animation-timing-function), background-color var(--animation) var(--animation-timing-function);
 }
 
 .social-icons-item + .social-icons-item {
@@ -327,13 +330,12 @@ margin-bottom: 4px;
    width: 20px;
    height: 20px;
    fill: var(--icon-main-color);
-   transition: fill var(--animation) var(--animation-timing-function);
+   transition: fill var(--animation) var(--animation-timing-function), background-color var(--animation) var(--animation-timing-function);
  }
 
 .social-icons-link:hover .icon,
 .social-icons-link:focus .icon {
   fill: var(--bg-text-color);
-  background-color: var(--accent-color);
 }
 
 .social-icons-link:hover,
@@ -631,8 +633,6 @@ transition: fill var(--animation) var(--animation-timing-function);
   }
 
   .footer-sec {
-    width: 100%;
-    /*height: 252px;*/
     padding-top: 60px;
     padding-bottom: 60px;
   }
@@ -699,8 +699,21 @@ transition: fill var(--animation) var(--animation-timing-function);
   margin-bottom: 9px;
   }
 
+  .footer-sec .social-icons-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+  }
+
+  .social-sec .icon {
+    width: 20px;
+    height: 20px;
+    fill: var(--bg-text-color);
+    transition: fill var(--animation) var(--animation-timing-function), background-color var(--animation) var(--animation-timing-function);
+  }
+
   .social-sec .social-icons-link {
-    background: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color var(--animation) var(--animation-timing-function);
   }
 
   .social-icons-link:hover,
@@ -752,7 +765,7 @@ color: var(--bg-text-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transform: translate(-50%, -50%) scale(1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--animation) cubic-bezier(0.4, 0, 0.2, 1), opacity var(--animation) cubic-bezier(0.4, 0, 0.2, 1) ;
 }
 
 .button-close {
@@ -774,10 +787,11 @@ right: 8px;
 opacity: 0;
 visibility: hidden;
 pointer-events: none;
+transition: opacity var(--animation) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .is-hidden .modal {
-  transform: translateX(50%, 50%) scale(0.3);
+  transform: translate(50%, 50%) scale(0.3);
 }
 
 .line:after {
@@ -808,7 +822,7 @@ pointer-events: none;
   background-color: rgba(33,150,243,0.9);
   opacity: 0;
   transform: translateY(100%);
-  transition: transform var(--animation) cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--animation) cubic-bezier(0.4, 0, 0.2, 1), opacity var(--animation) cubic-bezier(0.4, 0, 0.2, 1) ;
 }
 .portfolio-list-item:hover .portfolio-item-overlay,
 .portfolio-list-item:focus .portfolio-item-overlay {
@@ -820,7 +834,6 @@ pointer-events: none;
   background-color: rgba(33,150,243,0.9);
   opacity: 1;
   transform: translateY(0);
-  transition: transform var(--animation) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-item-overlay-text {
