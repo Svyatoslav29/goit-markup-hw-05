@@ -19,7 +19,7 @@
 --bg-text-color: #FFFFFF;
 --white-bg-color: #F5F4FA;
 --icon-main-color: #AFB1B8;
---animation: 2500ms;
+--animation: 250ms;
 --animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 
