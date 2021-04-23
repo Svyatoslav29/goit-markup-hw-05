@@ -787,15 +787,15 @@ right: 8px;
 }
 
 .is-hidden {
-opacity: 0;
-visibility: hidden;
 pointer-events: none;
-transition: opacity var(--animation) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .is-hidden .modal {
-  transform: translate(50%, 50%) scale(0.3);
+  transform: translate(50%, 50%) scale(0);
+  opacity: 0;
+  transition: var(--animation) cubic-bezier(0.4, 0, 0.2, 1), opacity var(--animation) cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 
 .line:after {
   content: '';
