@@ -748,7 +748,7 @@ text-transform: uppercase;
 color: var(--bg-text-color);
 }
 
-.backdrop {
+.backdrop .is-hidden {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.2);
   width: 100%;
