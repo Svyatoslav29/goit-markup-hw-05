@@ -280,6 +280,7 @@ margin-bottom: 4px;
   }
 
   .link {
+    display: block;
     transition: box-shadow var(--animation) var(--animation-timing-function);
     background: var(--bg-text-color);
     border: 1px solid #EEEEEE;
